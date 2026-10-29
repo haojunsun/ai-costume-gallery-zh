@@ -29,7 +29,7 @@ python scripts/verify.py
 python scripts/serve.py --open
 ```
 
-访问 **http://127.0.0.1:8949/**。服务仅监听本机，终端中按 `Ctrl+C` 停止。端口被占用时可指定其他端口：
+访问 [http://127.0.0.1:8949/](http://127.0.0.1:8949/)。服务仅监听本机，终端中按 `Ctrl+C` 停止。端口被占用时可指定其他端口：
 
 ```powershell
 python scripts/serve.py --port 9321 --open
