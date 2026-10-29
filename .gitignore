@@ -1,0 +1,10 @@
+.source/
+__pycache__/
+*.part
+*.log
+dist/
+# Local-only image collection: do not accidentally publish image assets.
+thumbs/
+img/
+png/
+docs/screenshots/

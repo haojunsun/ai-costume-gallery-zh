@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>AI 服装参考库｜1,407 套服装 · 中文版</title>
+  <meta name="description" content="本地中文 AI 服装参考图库，收录 1,407 套服装，支持分类筛选、中英文搜索、高清预览和 PNG 原图下载。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235b5bd6'/%3E%3Cpath d='m10 8-6 5 3 4 3-2v10h12V15l3 2 3-4-6-5-3 3h-6z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="icon-shirt" viewBox="0 0 24 24"><path d="m8 3-6 5 3 4 3-2v11h8V10l3 2 3-4-6-5c-1 3-7 3-8 0Z"/></symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="icon-guide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 0 1 4.6 1c0 1.8-2.3 2-2.3 3.6M12 17h.01"/></symbol>
+  <symbol id="icon-notice" viewBox="0 0 24 24"><path d="M12 3 2.8 20h18.4L12 3Z M12 9v5m0 3h.01"/></symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 4h6v6m0-6-9 9M19 14v6H4V5h6"/></symbol>
+  <symbol id="icon-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/></symbol>
+  <symbol id="icon-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10m-7 6h4"/></symbol>
+  <symbol id="icon-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="icon-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="shell topbar">
+    <a class="brand" href="./" aria-label="返回服装参考库首页">
+      <span class="brand-mark"><svg class="icon" width="22" height="22"><use href="#icon-shirt"/></svg></span>
+      <span class="brand-copy"><strong>COSTUME Atlas</strong><span>服装参考图库</span></span>
+    </a>
+    <nav class="top-actions" aria-label="帮助与来源">
+      <button class="action-btn" type="button" data-info="guide" aria-label="使用指南"><svg class="icon" width="16" height="16"><use href="#icon-guide"/></svg><span class="action-text">使用指南</span></button>
+      <button class="action-btn" type="button" data-info="notice" aria-label="注意事项"><svg class="icon" width="16" height="16"><use href="#icon-notice"/></svg><span class="action-text">注意事项</span></button>
+      <a class="action-btn author" href="https://ai-costume-gallery.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="访问原始服装图库"><svg class="icon" width="16" height="16"><use href="#icon-external"/></svg><span class="action-text">原始图库</span></a>
+    </nav>
+  </div>
+  <div class="shell hero">
+    <div>
+      <p class="eyebrow">AI COSTUME REFERENCE · 中文版图库</p>
+      <h1>AI 服装参考库<span class="hero-tagline">找到你想要的每一套穿搭</span></h1>
+      <p class="hero-desc">不含人物的服装搭配参考，适用于 AI 绘画与角色造型。按季节、风格筛选，中英文搜索，一键下载原图。</p>
+    </div>
+    <div class="hero-stats" aria-label="图库统计">
+      <div class="stat"><strong id="statCostumes">1,407</strong><span>套服装</span></div>
+      <div class="stat"><strong id="statCategories">8</strong><span>个分类</span></div>
+      <div class="stat"><strong>PNG</strong><span>高清原图</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="controls" aria-label="图库筛选">
+  <div class="shell controls-inner">
+    <div class="line-tabs" id="categoryTabs" role="group" aria-label="服装分类"></div>
+    <div class="search-row">
+      <div class="search-box">
+        <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#icon-search"/></svg>
+        <input id="searchInput" type="search" placeholder="搜索服装、颜色、材质或 ID，如：白色 蕾丝 / denim" autocomplete="off" aria-label="搜索服装、颜色、材质或 ID">
+        <button class="search-clear" id="searchClear" type="button" aria-label="清空搜索" hidden><svg class="icon" width="13" height="13"><use href="#icon-close"/></svg></button>
+        <span class="search-key" aria-hidden="true">/</span>
+      </div>
+      <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterPanel"><svg class="icon" width="17" height="17"><use href="#icon-filter"/></svg>筛选<span class="filter-badge" id="filterBadge"></span></button>
+    </div>
+    <div class="filter-panel" id="filterPanel">
+      <div class="filter-field">
+        <label class="filter-label" for="categorySelect">服装分类</label>
+        <div class="select-wrap"><select id="categorySelect"><option value="">全部分类</option></select></div>
+      </div>
+      <div class="filter-field view-field">
+        <span class="filter-label">展示方式</span>
+        <div class="segmented" id="viewFilter" role="group" aria-label="切换展示方式">
+          <button type="button" data-view="detail" aria-pressed="true">详细卡片</button>
+          <button type="button" data-view="compact" aria-pressed="false">简洁卡片</button>
+        </div>
+      </div>
+      <button class="reset-btn" id="resetFilters" type="button">重置筛选</button>
+    </div>
+  </div>
+</section>
+
+<main class="shell">
+  <h2 class="sr-only">服装图库列表</h2>
+  <div class="result-head">
+    <div class="result-summary" role="status"><strong id="resultCount">正在加载图库…</strong><span id="visibleCount"></span></div>
+    <div class="result-hint"><svg class="icon" width="15" height="15"><use href="#icon-expand"/></svg>点击查看高清图 · 支持键盘与滑动浏览</div>
+  </div>
+  <div class="active-filters" id="activeFilters" aria-label="当前筛选条件"></div>
+  <div class="grid" id="grid" aria-busy="true">
+    <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+    <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+    <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+    <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+  </div>
+  <button class="load-more" id="loadMore" type="button" hidden>加载更多</button>
+  <noscript><p class="empty">请启用 JavaScript 后浏览图库。</p></noscript>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-copy">
+      <p><strong>COSTUME Atlas 中文版</strong> · 原始服装图片与数据来自 ギア（@giaaibusi）</p>
+      <p>原站中文汉化与本地化整理 · 非商业学习交流项目 · 源码采用 MIT，图片与原始数据遵循原作者条款。</p>
+      <p>本地参考图库 · 图片使用遵循原作者条款，禁止图片数据的再分发、转载与转售。</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://ai-costume-gallery.pages.dev/" target="_blank" rel="noopener noreferrer">原始图库 ↗</a>
+      <a href="https://x.com/giaaibusi" target="_blank" rel="noopener noreferrer">原作者 ↗</a>
+      <a href="https://github.com/anhao/ai-pose-gallery-zh" target="_blank" rel="noopener noreferrer">样式参考 ↗</a>
+    </div>
+  </div>
+</footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewerTitle" tabindex="-1" hidden>
+  <section class="viewer-panel">
+    <button class="viewer-close" id="viewerClose" type="button" aria-label="关闭大图"><svg class="icon" width="20" height="20"><use href="#icon-close"/></svg></button>
+    <div class="viewer-stage" id="viewerStage">
+      <img class="viewer-image" id="viewerImage" alt="" draggable="false">
+      <span class="image-status" id="imageStatus" role="status" hidden>正在加载原图…</span>
+      <button class="viewer-nav prev" id="itemPrev" type="button" aria-label="上一套服装"><svg class="icon" width="24" height="24"><use href="#icon-prev"/></svg></button>
+      <button class="viewer-nav next" id="itemNext" type="button" aria-label="下一套服装"><svg class="icon" width="24" height="24"><use href="#icon-next"/></svg></button>
+    </div>
+    <aside class="viewer-side">
+      <div class="viewer-heading">
+        <div class="viewer-eyebrow"><span id="viewerCategory"></span><span class="viewer-position" id="viewerPosition"></span></div>
+        <h2 id="viewerTitle">服装详情</h2>
+        <div class="id-row"><code class="viewer-id" id="viewerId"></code><button class="copy-btn" id="copyId" type="button">复制 ID</button></div>
+      </div>
+      <div><h3 class="side-section-title">中文服装描述</h3><p class="viewer-description" id="viewerDescription"></p></div>
+      <div class="download-stack">
+        <a class="download-btn" id="downloadImage" href="#" download><svg class="icon" width="17" height="17"><use href="#icon-download"/></svg>下载原尺寸 PNG</a>
+        <button class="open-btn" id="copyDescription" type="button">复制中文描述</button>
+        <a class="open-btn" id="openImage" href="#" target="_blank" rel="noopener noreferrer"><svg class="icon" width="16" height="16"><use href="#icon-external"/></svg>新窗口打开原图</a>
+      </div>
+      <dl class="metadata"><dt>服装分类</dt><dd id="viewerMetaCategory"></dd><dt>原图尺寸</dt><dd id="viewerDimensions">正在读取…</dd><dt>英文关键词</dt><dd class="english-keywords" id="viewerEnglish"></dd></dl>
+      <div class="keyboard-help"><kbd>←</kbd> <kbd>→</kbd> 上一套 / 下一套<br><kbd>Esc</kbd> 关闭 · 手机可左右滑动切换</div>
+      <span id="copyStatus" class="copy-status" role="status"></span>
+    </aside>
+  </section>
+</div>
+
+<dialog class="info-dialog" id="infoDialog">
+  <div class="info-head"><h2 id="infoTitle">使用指南</h2><button class="info-close" id="infoClose" type="button" aria-label="关闭说明"><svg class="icon" width="18" height="18"><use href="#icon-close"/></svg></button></div>
+  <div class="info-content" id="infoContent"></div>
+</dialog>
+</body>
+</html>
