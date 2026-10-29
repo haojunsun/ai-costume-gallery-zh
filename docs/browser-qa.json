@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-29",
+  "browser": "Codex IAB",
+  "checks": [
+    "中文多词搜索：79 套",
+    "ID 精确搜索与本地原图加载",
+    "加载更多：60 → 120 张卡片",
+    "前后导航、方向键与实际 PNG 下载",
+    "空搜索恢复、完整中文注意事项",
+    "手机 390×844 双列、筛选展开、春季计数、简洁卡片与灯箱",
+    "八类数量逐一核对、英文关键词搜索：151 套、分类与搜索组合",
+    "修正灯箱裁切：图片元素尺寸与容器一致，contain 完整显示",
+    "最终页面控制台：0 条 error/warn"
+  ],
+  "categories": [
+    {
+      "category": "春季",
+      "count": 215
+    },
+    {
+      "category": "夏季",
+      "count": 254
+    },
+    {
+      "category": "秋季",
+      "count": 244
+    },
+    {
+      "category": "冬季",
+      "count": 253
+    },
+    {
+      "category": "内衣",
+      "count": 199
+    },
+    {
+      "category": "派对礼服",
+      "count": 48
+    },
+    {
+      "category": "泳装",
+      "count": 54
+    },
+    {
+      "category": "性感服饰",
+      "count": 140
+    }
+  ],
+  "viewports": [
+    "1440×1000",
+    "390×844",
+    "320×740"
+  ],
+  "downloadSha256MatchesOriginal": true,
+  "physicalTouchDeviceTested": false,
+  "consoleErrors": []
+}
