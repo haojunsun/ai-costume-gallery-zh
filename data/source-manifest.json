@@ -1,0 +1,28 @@
+{
+  "captured_date": "2026-10-29",
+  "costume_source": "https://ai-costume-gallery.pages.dev/",
+  "style_reference": "https://github.com/anhao/ai-pose-gallery-zh",
+  "scope": "local_only",
+  "snapshots": {
+    ".source/costume.html": {
+      "bytes": 338646,
+      "sha256": "6280405c6cf5ec0efa5385afaa69d31471572ca9df900a0f8b71c746fc37a742"
+    },
+    ".source/reference.html": {
+      "bytes": 58619,
+      "sha256": "c3fd2cb9eadbbc2ef4da581c1167f05af0d8ea70ea4c0f3c34b881d030418cf8"
+    },
+    ".source/reference-LICENSE.txt": {
+      "bytes": 1615,
+      "sha256": "7f8b59e5d91bc2c4957618b45fc063d739a26e0a30ef13b8260f115b7dec7b71"
+    },
+    "data/costume.json": {
+      "bytes": 362385,
+      "sha256": "40f3218ff0ba3c64acdf2b9199188db44abdd9070aa37ec33241c5c314876ae3"
+    },
+    "data/meta.json": {
+      "bytes": 363,
+      "sha256": "40d8ce22463d09adb8ba69cc02363bfa392bb1e7637430b05c548a6cec6c39e6"
+    }
+  }
+}
